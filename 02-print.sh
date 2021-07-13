@@ -31,3 +31,4 @@ echo -e Hello World,\n\tWelcome
 echo -e "\e[31mMESSAGE IN RED"
 echo -e "\e[33mMESSAGE IN YELLOW"
 
+echo Hello World in Plain Color
