@@ -31,6 +31,6 @@ echo -e Hello World,\n\tWelcome
 # Colors enabled will take those colors to next lines, Hence we need to disable color when we are done with color printing . \e[0m , 0 will reset the color
 
 echo -e "\e[31mMESSAGE IN RED\e[0m"
-echo -e "\e[33mMESSAGE IN YELLOW\[0m"
+echo -e "\e[33mMESSAGE IN YELLOW\e[0m"
 
 echo Hello World in Plain Color
