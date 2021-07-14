@@ -10,8 +10,8 @@ echo $0
 echo $1
 
 ##  Pull all the parsed values
-echo *
-echo @
+echo $*
+echo $@
 
-## Number of values parsed is $#  
+## Number of values parsed is $#
 echo $#
