@@ -6,4 +6,9 @@
 ## In script if you want ot access the script name itself then $0
 echo $0
 
+## $1 is the first argument and $n is the nth argument
 echo $1
+
+##  Pull all the parsed values
+echo *
+echo @
