@@ -11,7 +11,7 @@
 echo Hello World
 
 ## Syntax for color or new lines : echo -e "MESSAGE\n\t\e"
-# echo -e option do need mesage to be quoted (Either single or double quotes) | (With out quotes also works but with more syntaxing)
+# echo -e option do need message to be quoted (Either single or double quotes) | (With out quotes also works but with more syntaxing)
 
 # Print Multiple Lines (\n), Some tab space (\t)
 
