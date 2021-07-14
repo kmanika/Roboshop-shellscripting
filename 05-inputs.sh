@@ -12,3 +12,6 @@ echo $1
 ##  Pull all the parsed values
 echo *
 echo @
+
+## Number of values parsed is $#  
+echo $#
