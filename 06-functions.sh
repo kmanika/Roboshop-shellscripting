@@ -6,6 +6,7 @@ sample() {
   echo Hello , I am a Sample function
   echo Value of a = ${a}
   b=200
+  echo First Argument in Function = $1
 }
 
 ## Main Program
@@ -14,3 +15,4 @@ sample() {
 a=100
 sample
 echo Value of b = ${b}
+echo First Argument in Main Program = $1
