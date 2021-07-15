@@ -10,9 +10,9 @@ user:		## Install User Component
 	@bash user.sh
 shipping:	## Install Shipping Component
 	@bash shipping.sh
-payment:	## Install Payment Component
+payment:		## Install Payment Component
 	@bash payment.sh
-mongodb:	## Install MongoDB Component
+mongodb:		## Install MongoDB Component
 	@bash mongodb.sh
 redis:		## Install Redis Component
 	@bash redis.sh
