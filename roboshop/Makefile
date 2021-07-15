@@ -1,4 +1,4 @@
-help:	## Print this message
+help:		## Print this message
 	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
 frontend:	## Install Frontend Component
 	@echo Installing Frontend
@@ -20,4 +20,4 @@ mysql:		## Install MySQL Component
 	@echo Installing MySQL
 rabbitmq:	## Install RabbitMQ Component
 	@echo Installing Rabbitmq
-
+databases:	mongodb redis mysql rabbitmq	## Install All Databases
