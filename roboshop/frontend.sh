@@ -12,17 +12,20 @@ STAT_CHECK() {
   fi
 }
 
-echo -n -e "Installing Nginx\t\t..."
+PRINT() {
+  echo -n -e "$1\t\t..."
+}
+PRINT "Installing Nginx"
 yum install nginx -y &>>$LOG
 STAT_CHECK $?
 
 ### 3. Need to validate whether the script is running as root user not.
 
-echo -n -e "Enabling Nginx\t\t\t..."
+PRINT "Enabling Nginx"
 systemctl enable nginx  &>>$LOG
 STAT_CHECK $?
 
-echo -n -e "Starting Nginx\t\t\t..."
+echo "Starting Nginx"
 systemctl start nginx  &>>$LOG
 STAT_CHECK $?
 
