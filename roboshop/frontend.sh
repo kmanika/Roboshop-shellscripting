@@ -8,8 +8,8 @@ yum install nginx -y >$LOG
 ### 2. Validate the command is successful or not
 
 echo "Enabling Nginx"
-systemctl enable nginx
+systemctl enable nginx  >$LOG
 
 echo "Starting Nginx"
-systemctl start nginx
+systemctl start nginx  >$LOG
 
