@@ -1,5 +1,11 @@
 #!/bin/bash
 
+USER_ID=$(id -u)
+if [ $USER_ID -ne 0 ]; then
+  echo -e "\e[31mYou should be root user / sudo user to run this script\e[0m"
+  exit 2
+fi
+
 LOG=/tmp/roboshop.log
 rm -f $LOG
 
@@ -16,9 +22,5 @@ PRINT() {
   echo -n -e "$1\t\t..."
 }
 
-USER_ID=$(id -u)
-if [ $USER_ID -ne 0 ]; then
-  echo -e "\e[31mYou should be root user / sudo user to run this script\e[0m"
-  exit 2
-fi
+
 
