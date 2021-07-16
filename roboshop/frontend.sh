@@ -13,7 +13,7 @@ STAT_CHECK() {
 }
 
 echo -n -e "Installing Nginx\t\t..."
-yumm install nginx -y &>>$LOG
+yum install nginx -y &>>$LOG
 STAT_CHECK $?
 
 ### 3. Need to validate whether the script is running as root user not.
