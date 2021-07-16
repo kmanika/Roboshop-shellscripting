@@ -3,11 +3,14 @@
 LOG=/tmp/roboshop.log
 rm -f $LOG
 
-echo -e "Installing Nginx\t\t... \e[32mdone\e[0m"
+echo -e "Installing Nginx\t\t... "
 yum install nginx -y &>>$LOG
-echo $?
-### 1. Output from commands should not be displayed on screen
-### 2. Validate the command is successful or not
+if [ $? -eq 0 ]; then
+  echo done
+else
+  echo fail
+fi
+
 ### 3. Need to validate whether the script is running as root user not.
 
 echo "Enabling Nginx"
