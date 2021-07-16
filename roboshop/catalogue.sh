@@ -1,3 +1,3 @@
 #!/bin/bash
 
-LOG=/tmp/catalogue.log
+source common.sh
