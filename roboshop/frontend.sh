@@ -25,7 +25,7 @@ PRINT "Enabling Nginx"
 systemctl enable nginx  &>>$LOG
 STAT_CHECK $?
 
-echo "Starting Nginx"
+PRINT "Starting Nginx"
 systemctl start nginx  &>>$LOG
 STAT_CHECK $?
 
