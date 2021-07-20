@@ -17,8 +17,8 @@ PRINT "Download Application Code"
 curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip" &>>$LOG
 STAT_CHECK $?
 
-PRINT "Extract Downlaoded Code"
-cd /home/roboshop && unzip -o  /tmp/catalogue.zip &>>$LOG  && mv catalogue-main catalogue && cd /home/roboshop/catalogue && npm install
+PRINT "Extract Downloaded Code"
+cd /home/roboshop && unzip -o  /tmp/catalogue.zip &>>$LOG  && mv catalogue-main catalogue && cd /home/roboshop/catalogue && npm install --unsafe-perm
 STAT_CHECK $?
 
 # mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
