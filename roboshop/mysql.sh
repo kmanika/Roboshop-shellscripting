@@ -28,10 +28,10 @@ fi
 STAT_CHECK $?
 
 PRINT "Uninstall MySQL Password Policy"
-echo SHOW PLUGINS | mysql -uroot -pRoboShop@1 | grep -i validate_password &>>$LOG
+echo SHOW PLUGINS | mysql -uroot -pRoboShop@1 2>>$LOG | grep -i validate_password &>>$LOG
 if [ $? -eq 0 ]; then
   echo "uninstall plugin validate_password;" | mysql -uroot -pRoboShop@1 &>>$LOG
-fi 
+fi
 STAT_CHECK $?
 
 PRINT "Download Schema\t\t"
