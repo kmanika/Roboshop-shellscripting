@@ -102,7 +102,13 @@ PYTHON3() {
   PRINT "Install Python Dependencies"
   cd /home/roboshop/${COMPONENT} && pip3 install -r requirements.txt &>>$LOG
   STAT_CHECK $?
-  
+
+  PRINT "Update Service Configuration"
+  UID=$(id -u roboshop)
+  GID=$(id -g roboshop)
+  sed -i -e "/uid/ c uid = ${UID}" -e "/gid/ c gid = ${GIT}" payment.ini &>>$LOG 
+  STAT_CHECK $?
+
   PERM_FIX
 
   ##
