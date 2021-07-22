@@ -104,9 +104,9 @@ PYTHON3() {
   STAT_CHECK $?
 
   PRINT "Update Service Configuration"
-  UID=$(id -u roboshop)
-  GID=$(id -g roboshop)
-  sed -i -e "/uid/ c uid = ${UID}" -e "/gid/ c gid = ${GID}" payment.ini &>>$LOG
+  userID=$(id -u roboshop)
+  groupID=$(id -g roboshop)
+  sed -i -e "/uid/ c uid = ${userID}" -e "/gid/ c gid = ${groupID}" payment.ini &>>$LOG
   STAT_CHECK $?
 
   PERM_FIX
