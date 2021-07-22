@@ -101,7 +101,8 @@ PYTHON3() {
 
   PRINT "Install Python Dependencies"
   cd /home/roboshop/${COMPONENT} && pip3 install -r requirements.txt &>>$LOG
-
+  STAT_CHECK $?
+  
   PERM_FIX
 
   ##
