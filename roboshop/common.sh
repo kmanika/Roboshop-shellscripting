@@ -92,14 +92,14 @@ JAVA() {
 }
 
 PYTHON3() {
-  PRINT "Install Python3"
+  PRINT "Install Python3\t\t"
   yum install python36 gcc python3-devel -y &>>$LOG
   STAT_CHECK $?
 
   ADD_APPLICATION_USER
   DOWNLOAD_APP_CODE
 
-  PRINT "Install Python Dependencies"
+  PRINT "Install Python Dependencies\t"
   cd /home/roboshop/${COMPONENT} && pip3 install -r requirements.txt &>>$LOG
 
   PERM_FIX
