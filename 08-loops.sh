@@ -17,3 +17,16 @@ while [ $i -gt 0 ]; do
   echo Iteration = $i
   i=$(($i-1))
 done
+
+## For loop
+# for var in value1 value2 ... valuen ; do
+# Commands
+#done
+
+## Print multiple fruit names
+
+for fruit in apple banana orange kiwi ; do
+  echo $fruit
+done
+
+# above loop will iterate for 4 times as there are 4 values
