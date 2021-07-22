@@ -90,3 +90,20 @@ JAVA() {
   PERM_FIX
   SETUP_SYSTEMD
 }
+
+PYTHON3() {
+  PRINT "Install Python3"
+  yum install python36 gcc python3-devel -y &>>$LOG
+  STAT_CHECK $?
+
+  ADD_APPLICATION_USER
+  DOWNLOAD_APP_CODE
+
+  PRINT "Install Python Dependencies"
+  cd /home/roboshop/${COMPONENT} && pip3 install -r requirements.txt &>>$LOG
+
+  PERM_FIX
+
+  ##
+  #SETUP_SYSTEMD
+}
