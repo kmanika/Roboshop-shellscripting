@@ -99,7 +99,7 @@ PYTHON3() {
   ADD_APPLICATION_USER
   DOWNLOAD_APP_CODE
 
-  PRINT "Install Python Dependencies\t"
+  PRINT "Install Python Dependencies"
   cd /home/roboshop/${COMPONENT} && pip3 install -r requirements.txt &>>$LOG
 
   PERM_FIX
