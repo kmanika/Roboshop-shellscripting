@@ -1,5 +1,5 @@
 pipeline {
-  agent Ny
+  agent any
 
   stages {
 
