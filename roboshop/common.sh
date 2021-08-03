@@ -51,7 +51,7 @@ PERM_FIX() {
 
 SETUP_SYSTEMD() {
   PRINT "Setup SystemD file\t"
-  sed -i -e "s/MONGO_DNSNAME/mongodb.roboshop.internal/" -e "s/REDIS_ENDPOINT/redis.roboshop.internal/" -e "s/MONGO_ENDPOINT/mongodb.roboshop.internal/" -e "s/CATALOGUE_ENDPOINT/catalogue.roboshop.internal/" -e 's/CARTENDPOINT/cart.roboshop.internal/' -e 's/DBHOST/mysql.roboshop.internal/' -e 's/CARTHOST/cart.roboshop.internal/' -e 's/USERHOST/user.roboshop.internal/' -e 's/AMQPHOST/rabbitmq.roboshop.internal/'  /home/roboshop/${COMPONENT}/systemd.service && mv /home/roboshop/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
+  sed -i -e "s/MONGO_DNSNAME/mongodb.devops.jcp/" -e "s/REDIS_ENDPOINT/redis.devops.jcp/" -e "s/MONGO_ENDPOINT/mongodb.devops.jcp/" -e "s/CATALOGUE_ENDPOINT/catalogue.devops.jcp/" -e 's/CARTENDPOINT/cart.devops.jcp/' -e 's/DBHOST/mysql.devops.jcp/' -e 's/CARTHOST/cart.devops.jcp/' -e 's/USERHOST/user.devops.jcp/' -e 's/AMQPHOST/rabbitmq.devops.jcp/'  /home/roboshop/${COMPONENT}/systemd.service && mv /home/roboshop/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
   STAT_CHECK $?
 
   PRINT "Start ${COMPONENT} Service\t"
