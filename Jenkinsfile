@@ -5,7 +5,8 @@ pipeline {
 
     stage('Terraform INIT') {
       steps {
-        sh 'cd  roboshop ; terraform init'
+        git branch: 'main', url: 'https://github.com/mahithbudida/Roboshop-terraform.git'
+        sh 'cd roboshop ; terraform init'
       }
     }
 
